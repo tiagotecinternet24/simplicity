@@ -44,9 +44,70 @@ a { text-decoration: none; }
 }
 
 .topo {
-    background-color: yellow;
-    height: 12vh;
+    height: 12vh; 
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+
+.titulo-menu a {
+    color: var(--cor-escura);
+    font-size: 1.2rem;
+    padding: 1rem;
+    display: inline-block;
+}
+
+.menu a:hover, .menu a:focus {
+    background-color: var(--cor-intermediaria);
+}
+
+/* Estilos para a lista ul contida no menu nav */
+.links-menu {
+    /* Atenção! Neste ponto, fazemos com que
+    os links do menu iniciem escondidos (display:none) em telas pequenas.
+    Posteriormente, com a ajuda do CSS combinado com o JS, faremos os comandos necessários para exibir/esconder de forma alternada. */
+    display: none;
+
+    a {
+        color: var(--cor-escura);
+        font-weight: bold;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+
+
+.links-menu.aberto {
+    /* Ativamos o flex para anular o display:none (fazendo os links aparecem) e ao mesmo tempo ter os recursos do flex. */
+    display: flex;
+
+    /* Mudamos a direção para coluna para
+    voltar a exibir um link em cima do outro. */
+    flex-direction: column;
+
+    /* Usamos o position e coordenadas para
+    ajustar a posição final e o tamanho que os
+    links ocuparão na tela logo abaixo da palavra
+    Menu. */
+    position: absolute;
+    left: 0;
+    right: 0;
+
+    background-color: var(--cor-clara);
+}
+
+
+/* Exercícios */
+
+/* 1) Crie uma regra específica para formatar o artigo "Destaque" com as seguintes configurações: 
+
+- Altura de 88vh
+- Imagem de fundo (fundo-destaque)
+- Imagem de fundo deve ficar parada
+- Use o flex para alinhar totalmente no meio
+- Use o flex para garantir que os textos fiquem um em cima do outro
+
+2) Crie uma regra para formatar o "h2" e o "p" contidos no "Destaque". Faça com que os textos fiquem centralizados com a cor clara. */
