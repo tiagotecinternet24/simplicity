@@ -44,11 +44,30 @@ a { text-decoration: none; }
 }
 
 .topo {
-    height: 12vh; 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    position: sticky;
+    top: 0;
+    background-color: var(--cor-clara);
+    
+    /* Classe .limitador específica para uso
+    no cabeçalho/topo: além das configurações
+    gerais (width e margin), AQUI ela também tem
+    altura e ajustes do flex. */
+    .limitador {
+        height: 12vh; 
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 }
+
+/* Classe .limitador de uso geral:
+Sempre terá largura de 95vw e margin auto
+não importando onde será aplicada. */
+.limitador {
+    width: 95vw;
+    margin: auto;
+}
+
 
 .titulo-menu a {
     color: var(--cor-escura);
@@ -180,6 +199,39 @@ article {
     text-align: center;
 }
 
+/* Exercícios (correção) */
+.historia {
+    background-image: url(../imagens/fundo-madeira.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+
+    h2 {
+        color: var(--cor-clara);
+        text-shadow: var(--cor-escura) 2px 2px 5px;
+    }
+
+    iframe {
+        width: 100%;
+        max-width: 700px;
+        margin-bottom: 2rem;
+    }
+}
+
+.localizacao iframe {
+    width: 100%;
+    margin-top: 2rem;
+}
+
+.rodape {
+    background-color: var(--cor-escura);
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--cor-clara);
+    font-weight: bold;
+    text-align: center;
+}
 
 
 
