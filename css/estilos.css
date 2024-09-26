@@ -99,15 +99,22 @@ a { text-decoration: none; }
     background-color: var(--cor-clara);
 }
 
+.destaque {
+    height: 88vh;
+    background-image: url(../imagens/fundo-destaque.jpg);
+    background-attachment: fixed;
 
-/* Exercícios */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 
-/* 1) Crie uma regra específica para formatar o artigo "Destaque" com as seguintes configurações: 
+    /* Ou usando: */
+    /* flex-wrap: wrap;
+    align-content: center; */
 
-- Altura de 88vh
-- Imagem de fundo (fundo-destaque)
-- Imagem de fundo deve ficar parada
-- Use o flex para alinhar totalmente no meio
-- Use o flex para garantir que os textos fiquem um em cima do outro
-
-2) Crie uma regra para formatar o "h2" e o "p" contidos no "Destaque". Faça com que os textos fiquem centralizados com a cor clara. */
+    h2, p {
+        color: var(--cor-clara);
+        text-align: center;
+    }    
+}
