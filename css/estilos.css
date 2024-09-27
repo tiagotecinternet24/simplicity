@@ -44,6 +44,11 @@ a { text-decoration: none; }
 }
 
 .topo {
+    /* Necessário para garantir 
+    que o topo fique sempre por cima de 
+    qualquer elemento */
+    z-index: 10;
+    
     position: sticky;
     top: 0;
     background-color: var(--cor-clara);
@@ -282,6 +287,20 @@ article {
     }
 }
 
+
+
+.galeria {
+    text-align: center;
+    img {
+        border-radius: 50%;
+        transform: scale(0.8) rotate(-10deg);
+        box-shadow: var(--cor-escura) 0 0 30px;
+        transition: .5s;
+        &:hover { /* ou FORA .galeria img:hover {} */
+            transform: scale(1) rotate(0);
+        }
+    }
+}
 
 
 
